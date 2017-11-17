@@ -30,5 +30,14 @@ namespace KataUnitTest
                             "How can mirrors be real if our eyes aren't real".ToJadenCase(),
                             "Strings didn't match.");
         }
+
+        [TestMethod]
+        public void FindNextSquareTestOne() => Assert.AreEqual(144,
+                            Kata.FindNextSquare(121),
+                            "Expected is 144");
+
+
+        [TestMethod]
+        public void FindNextSquareTestTwo() => Assert.AreEqual(-1, Kata.FindNextSquare(155));
     }
 }

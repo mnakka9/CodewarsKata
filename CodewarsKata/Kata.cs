@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using static System.Math;
 
 namespace CodewarsKata
 {
@@ -37,6 +38,16 @@ namespace CodewarsKata
                 //return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(phrase);
             }
             return String.Empty;
+        }
+
+        /// <summary>
+        /// Find Next Perfect Square
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public static long FindNextSquare(long num)
+        {
+            return Sqrt(num) % 1 == 0 ? (long)Pow(Sqrt(num) + 1, 2) : -1;
         }
     }
 }
