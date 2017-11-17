@@ -49,5 +49,19 @@ namespace CodewarsKata
         {
             return Sqrt(num) % 1 == 0 ? (long)Pow(Sqrt(num) + 1, 2) : -1;
         }
+
+        /// <summary>
+        /// Duplicate Encode ()
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static string DuplicateEncode(string word) =>
+            new string(word.ToLower().Select(ch => word.ToLower().Count(innerCh => ch == innerCh) == 1 ? '(' : ')').ToArray());
+
+
+        public static IEnumerable<string> OpenOrSenior(int[][] data)
+        {
+            return data.Count() > 0 ? data.Select(i => i[0] > 54 && i[1] > 7 ? "Senior" : "Open") : new List<string>();
+        }
     }
 }

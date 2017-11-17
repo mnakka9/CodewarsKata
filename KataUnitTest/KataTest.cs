@@ -1,5 +1,6 @@
 using CodewarsKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace KataUnitTest
 {
@@ -39,5 +40,21 @@ namespace KataUnitTest
 
         [TestMethod]
         public void FindNextSquareTestTwo() => Assert.AreEqual(-1, Kata.FindNextSquare(155));
+
+        [TestMethod]
+        public void EncodeTest() => Assert.AreEqual("(((", Kata.DuplicateEncode("din"));
+
+        [TestMethod]
+        public void OpenOrSeniorOne()
+        {
+            Assert.AreEqual(new[] { "Open", "Senior", "Open", "Senior" }, Kata.OpenOrSenior(new[] { new[] { 45, 12 }, new[] { 55, 21 }, new[] { 19, 2 }, new[] { 104, 20 } }).ToArray());
+        }
+
+        [TestMethod]
+        public void OpenOrSeniorTwo()
+        {
+            Assert.AreEqual(new[] { "Senior", "Open", "Open", "Open" }, Kata.OpenOrSenior(new[] { new[] { 59, 12 }, new[] { 45, 21 }, new[] { -12, -2 }, new[] { 12, 12 } }).ToArray());
+        }
+
     }
 }
