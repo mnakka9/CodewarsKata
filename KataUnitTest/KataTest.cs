@@ -66,5 +66,11 @@ namespace KataUnitTest
             CollectionAssert.AreEqual(r, Kata.inArray(a1, a2));
         }
 
+        [TestMethod]
+        public void TraingleRowOddNumbersSumTest()
+        {
+            Assert.AreEqual(8, Kata.RowSumOddNumbers(2));
+        }
+
     }
 }

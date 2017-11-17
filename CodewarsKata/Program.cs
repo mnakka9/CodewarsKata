@@ -12,6 +12,7 @@ namespace CodewarsKata
             //string[] a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
             //var x = Kata.inArray(a1, a2);
             //Console.Read();
+            var y = Kata.TripleDouble(228506585, 41177722899);
         }
     }
 }
