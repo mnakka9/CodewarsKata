@@ -1,5 +1,6 @@
 using CodewarsKata;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace KataUnitTest
@@ -47,13 +48,22 @@ namespace KataUnitTest
         [TestMethod]
         public void OpenOrSeniorOne()
         {
-            Assert.AreEqual(new[] { "Open", "Senior", "Open", "Senior" }, Kata.OpenOrSenior(new[] { new[] { 45, 12 }, new[] { 55, 21 }, new[] { 19, 2 }, new[] { 104, 20 } }).ToArray());
+            Assert.AreEqual(string.Join(" ",new List<string>() { "Open", "Senior", "Open", "Senior" }), string.Join(" ", Kata.OpenOrSenior(new[] { new[] { 45, 12 }, new[] { 55, 21 }, new[] { 19, 2 }, new[] { 104, 20 } }).ToList()));
         }
 
         [TestMethod]
         public void OpenOrSeniorTwo()
         {
-            Assert.AreEqual(new[] { "Senior", "Open", "Open", "Open" }, Kata.OpenOrSenior(new[] { new[] { 59, 12 }, new[] { 45, 21 }, new[] { -12, -2 }, new[] { 12, 12 } }).ToArray());
+            Assert.AreEqual(string.Join(" ", new List<string>() { "Senior", "Open", "Open", "Open" }), string.Join(" ", Kata.OpenOrSenior(new[] { new[] { 59, 12 }, new[] { 45, 21 }, new[] { -12, -2 }, new[] { 12, 12 } }).ToList()));
+        }
+
+        [TestMethod]
+        public void WhichAreInArrayTest()
+        {
+            string[] a1 = new string[] { "arp", "live", "strong" };
+            string[] a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
+            string[] r = new string[] { "arp", "live", "strong" };
+            CollectionAssert.AreEqual(r, Kata.inArray(a1, a2));
         }
 
     }

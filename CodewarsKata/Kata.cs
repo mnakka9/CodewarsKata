@@ -63,5 +63,22 @@ namespace CodewarsKata
         {
             return data.Count() > 0 ? data.Select(i => i[0] > 54 && i[1] > 7 ? "Senior" : "Open") : new List<string>();
         }
+
+        /// <summary>
+        /// Which are In Array
+        /// </summary>
+        /// <param name="array1"></param>
+        /// <param name="array2"></param>
+        /// <returns></returns>
+        public static string[] inArray(string[] array1, string[] array2)
+        {
+            return array1.Count() > 0 ? 
+                array1
+                .Select(elem => array2.Any(inp => inp.Contains(elem)) ? elem : null)
+                .Where(i => i != null).
+                OrderBy(k => k).
+                ToArray() 
+                : new string[0];
+        }
     }
 }

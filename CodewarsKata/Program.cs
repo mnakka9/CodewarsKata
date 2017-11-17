@@ -8,7 +8,10 @@ namespace CodewarsKata
         static void Main(string[] args)
         {
             //YourOrdersPlease.Order("4of Fo1r pe6ople g3ood th5e the2");
-            Kata.OpenOrSenior(new[] { new[] { 59, 12 }, new[] { 45, 21 }, new[] { -12, -2 }, new[] { 12, 12 } }).ToArray();
+            //string[] a1 = new string[] { "arp", "lve", "strong" };
+            //string[] a2 = new string[] { "lively", "alive", "harp", "sharp", "armstrong" };
+            //var x = Kata.inArray(a1, a2);
+            //Console.Read();
         }
     }
 }
