@@ -424,8 +424,7 @@ namespace CodewarsKata
             var res = new List<int>();
             while (val > 0)
             {
-                long rem;
-                val = Math.DivRem(val, obase, out rem);
+                val = DivRem(val, obase, out long rem);
                 res.Add((int)rem);
             }
             return String.Concat(res.Select(d => target[d]).Reverse());
