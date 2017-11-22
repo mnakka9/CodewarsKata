@@ -8,7 +8,7 @@ namespace CodewarsKata
     {
         static void Main(string[] args)
         {
-            var x = NumberPartition.Part(5);
+            var x = FactorialKata.Factorial(5);
             Console.Read();
         }
     }
