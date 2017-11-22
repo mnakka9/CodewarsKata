@@ -48,10 +48,7 @@ namespace CodewarsKata
         /// </summary>
         /// <param name="num"></param>
         /// <returns></returns>
-        public static long FindNextSquare(long num)
-        {
-            return Sqrt(num) % 1 == 0 ? (long)Pow(Sqrt(num) + 1, 2) : -1;
-        }
+        public static long FindNextSquare(long num) => Sqrt(num) % 1 == 0 ? (long)Pow(Sqrt(num) + 1, 2) : -1;
 
         /// <summary>
         /// Duplicate Encode ()
@@ -478,7 +475,7 @@ namespace CodewarsKata
                     if (p[1] - p[0] == g) return p;
                 }
             }
-            return new long[2];
+            return p;
         }
 
     }
