@@ -1,3 +1,3 @@
 # Code wars Kata
-Solutions for Kata's in Code Wars Website.
-https://www.codewars.com/kata/.
+-Solutions for Kata's in Code Wars Website in c#.
+-https://www.codewars.com/kata/.
