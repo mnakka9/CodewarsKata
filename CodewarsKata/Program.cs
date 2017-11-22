@@ -8,7 +8,7 @@ namespace CodewarsKata
     {
         static void Main(string[] args)
         {
-            var x = FactorialKata.Factorial(5);
+            var x = CountCoins.CountCombinations(4, new[] { 1, 2 });
             Console.Read();
         }
     }
