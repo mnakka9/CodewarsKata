@@ -8,7 +8,7 @@ namespace CodewarsKata
     {
         static void Main(string[] args)
         {
-            var x = Kata.Gap(2, 3, 10);
+            var x = NumberPartition.Part(5);
             Console.Read();
         }
     }
